@@ -4,7 +4,7 @@ This repository is for GDSR, and our presentation slide can be download here.
 
 The code is built on [BasicSR (PyTorch)](https://github.com/xinntao/BasicSR) and tested on Ubuntu 18.04/16.04 environment (Python3.6, PyTorch_1.0.1, CUDA9.0, cuDNN7.4) with Nividia RTX 2080Ti/GTX 1080Ti GPUs.
 # Contents
-[Introduction](#Introduction)
+[Introduction](#Introduction)  
 [results](#results)
 
 # Introduction
@@ -17,6 +17,6 @@ The PSNR-oriented super-resolution (SR) methods pursue high reconstruction accur
 ![RMSE_PI figure](https://github.com/wenchen4321/GDSR/tree/master/imgs/RMSE_PI.png)
 
 ## Qualitative Results
-![visual result1](https://github.com/wenchen4321/GDSR/tree/master/imgs/visual_result1.png)
-![visual result2](https://github.com/wenchen4321/GDSR/tree/master/imgs/visual_result2.png)
-![visual result3](https://github.com/wenchen4321/GDSR/tree/master/imgs/visual_result3.png)
+![visual result1](https://github.com/wenchen4321/GDSR/tree/master/imgs/visual_result1.png)  
+![visual result2](https://github.com/wenchen4321/GDSR/tree/master/imgs/visual_result2.png)  
+![visual result3](https://github.com/wenchen4321/GDSR/tree/master/imgs/visual_result3.png)  
