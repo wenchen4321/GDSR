@@ -1,7 +1,7 @@
 # Guided Dual Networks For Single Image Super-Resolution
 the github repository of GDSR
 This repository is for GDSR, and our presentation slide can be download [here](https://pan.baidu.com/s/1xT9nc6kcLpD9J7ITnDhdGA)   (access code:ipf7)
-the results of GDSR can be download [here](https://pan.baidu.com/s/1ZFK7n-mkZUoIa1P7iIzE1g) (access code:fvbh)
+the results of GDSR can be download [here](https://pan.baidu.com/s/1L_M2Qryd-mfr7N2z3X5PPg) (access code:l2y0)
 
 The code is built on [BasicSR (PyTorch)](https://github.com/xinntao/BasicSR) and tested on Ubuntu 18.04/16.04 environment (Python3.6, PyTorch_1.0.1, CUDA9.0, cuDNN7.4) with Nividia RTX 2080Ti/GTX 1080Ti GPUs.
 # Contents
