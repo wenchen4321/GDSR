@@ -21,3 +21,7 @@ The PSNR-oriented super-resolution (SR) methods pursue high reconstruction accur
 ![visual result1](/imgs/visual_result1.png)  
 ![visual result2](https://github.com/wenchen4321/GDSR/tree/master/imgs/visual_result2.png)  
 ![visual result3](https://github.com/wenchen4321/GDSR/tree/master/imgs/visual_result3.png)  
+
+## Acknowledgement
+Our work and implementations are inspired by following project:
+![BasicSR](https://github.com/xinntao/BasicSR)
