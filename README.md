@@ -14,8 +14,7 @@ The PSNR-oriented super-resolution (SR) methods pursue high reconstruction accur
 
 ![Network Architecture](https://github.com/wenchen4321/GDSR/tree/master/imgs/network1.png)
 # codes
-##train
-##test
+
 # results
 ## Quantitative Comparisons
 ![RMSE_PI figure](https://github.com/wenchen4321/GDSR/tree/master/imgs/RMSE_PI.png)
