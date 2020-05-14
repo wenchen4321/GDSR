@@ -1,0 +1,94 @@
+{
+  "name": "12_18_test_DualSR_DualSR_x4_200000_ImageNet_15"
+  , "suffix": ""
+  , "model": "DualSR"
+  , "scale": 4
+  , "gpu_ids": [0,1]
+
+  ,"datasets": {
+//    "test_1": {
+//      // the 1st test dataset
+//      "name": "DIVK900"
+//      , "mode": "LRHR"
+//      , "dataroot_HR": "/media/tane/File/chenwenhui/datasets/DIV2K/Dataset2/DIV2K_valid_HR"
+//      , "dataroot_LR": "/media/tane/File/chenwenhui/datasets/DIV2K/Dataset2/DIV2K_valid_LR"
+//    }
+    "test_1": {
+      // the 1st test dataset
+      "name": "ImageNet_DualSR"
+      , "mode": "LRHR"
+      ,"dataroot_HR":"/media/lcc/CWH/LR/HR_1000"
+      ,"dataroot_LR":"/media/lcc/CWH/LR/LR_1000"
+//      ,"dataroot_HR":"/media/tane/File/chenwenhui/datasets/ILSVRC2012_img_val"
+//      ,"dataroot_LR":"/media/tane/File/chenwenhui/datasets/ILSVRC2012_img_val_LR2"
+      // , "dataroot_HR": "/media/tane/File/chenwenhui/datasets/Set5"
+      // , "dataroot_LR": "/media/tane/File/chenwenhui/datasets/Set5_LR"
+    }
+    // ,"test_2": {
+    //   // the 1st test dataset
+    //   "name": "Set14"
+    //   , "mode": "LRHR"
+    //   , "dataroot_HR": "/media/tane/File/chenwenhui/datasets/Set14"
+    //   , "dataroot_LR": "/media/tane/File/chenwenhui/datasets/Set14_LRx4"
+    // }
+    // ,"test_3": {
+    //   // the 1st test dataset
+    //   "name": "Urban100"
+    //   , "mode": "LRHR"
+    //   , "dataroot_HR": "/media/tane/File/chenwenhui/datasets/Urban100_SR/HR"
+    //   , "dataroot_LR": "/media/tane/File/chenwenhui/datasets/Urban100_SR/LR"
+    // }
+    // ,"test_4": {
+    //   // the 1st test dataset
+    //    "name": "BSD100"
+    //   , "mode": "LRHR"
+    //   , "dataroot_HR": "/media/tane/File/chenwenhui/datasets/BSD100_SR/HR"
+    //   , "dataroot_LR": "/media/tane/File/chenwenhui/datasets/BSD100_SR/LR"
+    // }
+
+    // ,"test_5": {
+    //   // the 1st test dataset
+    //   "name": "Manga109"
+    //   , "mode": "LRHR"
+    //   , "dataroot_HR": "/media/tane/File/chenwenhui/datasets/Manga109/Manga109_GT"
+    //   , "dataroot_LR": "/media/tane/File/chenwenhui/datasets/Manga109/Manga109_LR"
+    // }
+
+    //    ,"test_1": { // the 1st test dataset
+    //      "name": "set5"
+    //      , "mode": "LRHR"
+    //      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set5/Set5"
+    //      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set5/Set5_bicLRx4"
+    //    }
+    //    , "test_2": { // the 2nd test dataset
+    //      "name": "set14"
+    //      , "mode": "LRHR"
+    //      , "dataroot_HR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14/Set14"
+    //      , "dataroot_LR": "/mnt/SSD/xtwang/BasicSR_datasets/val_set14/Set14_bicLRx4"
+    //    }
+  }
+  , "path": {
+    "root": "/home/lcc/CWH/LCC_BasicSR-master"
+    , "pretrain_model_G": "/home/lcc/CWH/LCC_BasicSR-master/dual_SR/gan/200000_G.pth"
+
+//    , "pretrain_model_G": "../experiments/pretrained_models/DualSR_200000_G.pth"
+    //, "pretrain_model_G": "../experiments/pretrained_models/DualSR_D.pth"
+  }
+  ,"network_G": {
+    "which_model_G": "DualSR_RRDB"
+    // RRDB_net | sr_resnet,
+    , "norm_type": null
+    , "mode": "CNA"
+    , "nf": 64
+    , "nb_l_1": 10
+    , "nb_l_2": 5,
+    "nb_h_1": 5,
+    "nb_h_2": 10,
+    "nb_e": 2,
+    "nb_m": 5
+    ,"in_nc": 3
+    , "out_nc": 3
+    , "gc": 32
+    , "group": 1
+  }
+}

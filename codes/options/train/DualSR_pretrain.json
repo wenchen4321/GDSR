@@ -1,0 +1,85 @@
+{
+  //haved change in read_img in util for img
+  //"name": "12_11_01_Dual_RRDBCA2_PSNR_x4_DIV2K" //  please remove "debug_" during training 1001 add long cut and unet
+  "name": "12_21_01_Dual_RRDB_128_GAN_x4_DIV2K"
+  , "use_tb_logger": true
+  , "model":"DualSR"
+  , "scale": 4
+  , "gpu_ids": [0,1]
+
+   , "datasets": {
+    "train": {
+      "name": "DIV2K"
+      , "mode": "LRHR"
+//      , "dataroot_HR": "/home/cwh/cwh/Dataset/2K_train_HR/2K_train_HR_new.lmdb"
+//      , "dataroot_LR": "/home/cwh/cwh/Dataset/2K_train_LR/2K_train_LR_new.lmdb"
+
+
+
+//      , "dataroot_HR": "/home/lcc/CWH/Dataset2/Flickr2K/2K_train_HR_new/2K_train_HR_new.lmdb"
+//
+      , "dataroot_HR": "/home/lcc/CWH/DIV2K800/DIV2K800_sub.lmdb"
+      , "dataroot_LR": "/home/lcc/CWH/DIV2K800/DIV2K800_sub_bicLRx4.lmdb"
+//      , "dataroot_LR": "/home/lcc/CWH/Dataset2/Flickr2K_LR_bicubic/2K_train_LR/2K_train_LR_new.lmdb"
+      //train_hr_lmdbx4/DF2K_lr_x4.lmdb"
+      , "subset_file": null
+      , "use_shuffle": true
+      , "n_workers": 8
+      , "batch_size": 28 // 36,32
+      , "HR_size": 128 // 128(12_08)
+      , "use_flip": true
+      , "use_rot": true
+    }
+    , "val": {
+      "name": "val_set5_part"
+      , "mode": "LRHR"
+      , "dataroot_HR": "/home/cwh/cwh/Dataset/Set5_HLR/Set5"
+      , "dataroot_LR": "/home/cwh/cwh/Dataset/Set5_HLR/Set5_LRx4"
+//      , "dataroot_HR": "/home/lcc/CWH/Dataset2/Set5"
+//      , "dataroot_LR": "/home/lcc/CWH/Dataset2/Set5_LRx4"
+    }
+  }
+
+  , "path": {
+    "root": "/home/lcc/CWH/LCC_BasicSR-master"
+    //"root": "/home/cwh/cwh/LCC_BasicSR-master"
+
+    //, "pretrain_model_G": "../pretrained_models/12_11_41000_G.pth"
+    , "pretrain_model_G": "../experiments/pretrained_models/470000_G.pth"
+  }
+ , "network_G": {
+    "which_model_G": "DualSR_RRDB" // RRDB_net | sr_resnet
+    , "norm_type": null
+    , "mode": "CNA"
+    , "nf": 64 // 64,32
+    , "nb_l_1": 10
+    , "nb_l_2": 5,
+    "nb_h_1": 5,
+    "nb_h_2": 10,
+    "nb_e": 2,
+    "nb_m": 5
+    ,"in_nc": 3
+    , "out_nc": 3
+    , "gc": 32
+    , "group": 1
+  }
+
+  , "train": {
+    "lr_G": 5e-5 // 2e-4,1e-4,5e-5,
+    , "lr_scheme": "MultiStepLR"
+    , "lr_steps": [200000, 400000, 600000, 800000]
+    , "lr_gamma": 0.5
+
+    , "pixel_criterion": "l1"
+    , "pixel_weight": 1.0
+    , "val_freq": 1e3
+
+    , "manual_seed": 0
+    , "niter": 1e6
+  }
+
+  , "logger": {
+    "print_freq": 200
+    , "save_checkpoint_freq": 1e3
+  }
+}
