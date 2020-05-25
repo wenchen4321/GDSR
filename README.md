@@ -1,5 +1,5 @@
 # Guided Dual Networks For Single Image Super-Resolution
-the github repository of GDSR<br/>
+# the github repository of GDSR<br/>
 This repository is for GDSR, and our presentation slide can be download [here](https://pan.baidu.com/s/1xT9nc6kcLpD9J7ITnDhdGA)   (access code:ipf7)
 the results of GDSR can be download [here](https://pan.baidu.com/s/1L_M2Qryd-mfr7N2z3X5PPg) (access code:l2y0)
 
