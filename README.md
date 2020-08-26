@@ -23,11 +23,11 @@ The PSNR-oriented super-resolution (SR) methods pursue high reconstruction accur
 ![RMSE_PI figure](/imgs/RMSE_PI.png)
 
 ## Qualitative Results
-![visual result1](/imgs/visual result1.png) <br/>
+![visual result1](imgs/visualresult1.png) <br/>
 
-![visual result2](/imgs/visual result2.png)  <br/>
+![visual result2](/imgs/visualresult2.png)  <br/>
 
-![visual result3](/imgs/visual result3.png)  
+![visual result3](/imgs/visualresult3.png)  
 
 ## Acknowledgement
 Our work and implementations are inspired by following project:<br/>
