@@ -29,4 +29,6 @@ Our work and implementations are inspired by following project:<br/>
 [BasicSR] (https://github.com/xinntao/BasicSR)<br/>
 
 If you find our work useful in your research or publication, please cite our work:
+
+
 [1]W. Chen, C. Liu, Y. Yan, L. Jin, X. Sun and X. Peng, **"Guided Dual Networks for Single Image Super-Resolution," in IEEE Access, vol. 8, pp. 93608-93620, 2020, doi: 10.1109/ACCESS.2020.2995175.**</i> [[PDF](https://ieeexplore.ieee.org/document/9097227)]
