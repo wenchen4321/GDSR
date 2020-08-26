@@ -1,5 +1,5 @@
 # Guided Dual Networks For Single Image Super-Resolution
-This repository is for GDSR, and our presentation slide can be download [here](https://pan.baidu.com/s/1xT9nc6kcLpD9J7ITnDhdGA)   (access code:ipf7)<br/>
+This repository is for GDSR, and our presentation slide can be download [here](https://pan.baidu.com/s/1xT9nc6kcLpD9J7ITnDhdGA)   (key:ipf7)<br/>
 the results of GDSR can be download [here](https://pan.baidu.com/s/1L_M2Qryd-mfr7N2z3X5PPg) (key:l2y0)<br/>
 The pretrained model can be downoad [here](https://pan.baidu.com/s/1eFON-E2sePAUGjnGDE5jTA)(key:7noo）<br/>
 
@@ -23,8 +23,10 @@ The PSNR-oriented super-resolution (SR) methods pursue high reconstruction accur
 ![RMSE_PI figure](/imgs/RMSE_PI.png)
 
 ## Qualitative Results
-![visual result1](/imgs/visual_result1.png)  
-![visual result2](/imgs/visual_result2.png)  
+![visual result1](/imgs/visual_result1.png) <br/>
+
+![visual result2](/imgs/visual_result2.png)  <br/>
+
 ![visual result3](/imgs/visual_result3.png)  
 
 ## Acknowledgement
