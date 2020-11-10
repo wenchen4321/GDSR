@@ -34,9 +34,7 @@ class DualSR_RRDB(nn.Module):
         rb_blocks_M = [B.RRDB(nf, kernel_size=3, gc=32, stride=1, bias=True, pad_type='zero', \
                               norm_type=norm_type, act_type=act_type, mode='CNA') for _ in range(nb_m)]
 
-        # self.body_ex = B.sequential(fea_conv, B.ShortcutBlock(B.sequential(*rb_blocks_e)))
-        self.body_ex_conv = B.sequential(fea_conv)
-        self.body_ex = B.sequential(B.ShortcutBlock(B.sequential(*rb_blocks_e)))
+        self.body_ex = B.sequential(fea_conv, B.ShortcutBlock(B.sequential(*rb_blocks_e)))
 
         self.body_l1 = B.sequential(B.ShortcutBlock(B.sequential(*rb_blocks_l1)))
         self.body_l2 = B.sequential(B.ShortcutBlock(B.sequential(*rb_blocks_l2)))
@@ -117,48 +115,6 @@ class DualSR_RRDB(nn.Module):
         combine = self.HR_conv1_m(combine)
 
         return x_l, x_h, combine
-        # # head
-        # x1 = self.body_ex_conv(x)
-        # x_ex = self.body_ex(x1)
-        #
-        # # x_ex = self.body_ex(x)
-        # #low
-        #
-        # x_guide = self.body_l1(x_ex)
-        # x_l = self.body_l2(x_guide)
-        # x_l = self.LR_conv_l(x_l)
-        # #x_l += x1  # add a long cut
-        # x_l = self.upsampler_l(x_l)
-        # x_fea_l =self.HR_conv0_l(x_l)
-        # x_l = self.HR_conv1_l(x_fea_l)
-        #
-        # #high
-        #
-        # x_h = self.body_h1(x_ex)
-        #
-        # x_h = self.concat(torch.cat((x_guide, x_h), 1))
-        # x_h = self.body_h2(x_h)
-        # x_h = self.LR_conv_h(x_h)
-        # #x_h += x1  # add long cut
-        # x_h = self.upsampler_h(x_h)
-        # x_fea_h = self.HR_conv0_h(x_h)
-        # x_h = self.HR_conv1_h(x_fea_h)
-        #
-        # # mask
-        # m = self.body_m(x_ex)
-        # m = self.LR_conv_M(m)
-        # #m += x1 # add a long cut
-        # m = self.upsampler_m(m)
-        # m = self.HR_conv0_m(m)
-        # M_sigmoid = torch.sigmoid(m)
-        #
-        # combine = M_sigmoid.mul(x_fea_h)+(1-M_sigmoid).mul(x_fea_l)
-        #
-        # combine = self.HR_conv1_m(combine)
-        #
-        #
-        #
-        # return x_l,x_h,combine
 
     def load_state_dict(self, state_dict, strict=False):
         own_state = self.state_dict()
